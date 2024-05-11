@@ -1,5 +1,6 @@
 
 
+
 /*
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,7 +17,7 @@
  *
  * 02-07-2022, v1.0, Pedro Akira Danno Lima
  *
- * Compile: gcc -Wall -O2 mycreatelargefile.c -o mycreatelargefile
+ * Compile: gcc -Wall -O2 db.c -o dbexec
  */
 
 
@@ -128,25 +129,33 @@ int main() {
 
 
 /*
-STUDY: 
-
-    //fputc() Function:
-
-*/
 
 
-/*
-COMPILE:
+
+
+
+COMPILE:    LINUX 
 
     apt-get install gcc
-    echo "" > mycreatelargefile.c
-    vi mycreatelargefile.c
-    gcc mycreatelargefile.c  -o mycreatelargefile
-    ./mycreatelargefile
+    vi db.c
+    gcc db.c -o dbexec
+    ./dbexec
 
 
-obs: 
-    will create a file with 11G
+
+
+
+
+COMPILE:    WINDOWS 
+        cd C:\Users\pedro.akira\OneDrive - pwi.com.br\Documentos\GitHub\chummyDB\src
+        gcc db.c -o dbexec
+        .\dbexec 
+
+
+
+
+
+
 
 
 */

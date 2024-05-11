@@ -1,3 +1,30 @@
+
+
+
+/*
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ *
+ * 02-07-2022, v1.0, Pedro Akira Danno Lima
+ *
+ * Compile: gcc -Wall -O2 db.c -o dbexec
+ */
+
+
+
+
+
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -190,15 +217,49 @@ This visualization demonstrates how the code dynamically creates new pages when 
 
 
 
+*/
 
 
 
 
-gcc db6.c -o dbexec 
-.\dbexec
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+
+
+
+COMPILE:    LINUX 
+
+    apt-get install gcc
+    vi db.c
+    gcc db.c -o dbexec
+    ./dbexec
+
+
+
+
+
+
+COMPILE:    WINDOWS 
+        cd C:\Users\pedro.akira\OneDrive - pwi.com.br\Documentos\GitHub\chummyDB\src
+        gcc db6.c -o db6exec
+        .\db6exec 
 
 
 
@@ -225,6 +286,123 @@ gcc db6.c -o dbexec
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+EXPLAIN: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+This C program demonstrates a simple implementation of a page-based data structure for storing tuples of data. Let's break down the main components:
+
+1. **Header Definitions**: 
+    - The program defines several structures, namely `PageHeader`, `Person`, `Tuple`, and `Page`, to represent the components of the data storage.
+
+2. **Page Structure**:
+    - The `Page` structure combines a `PageHeader` and an array of data to represent a single page in the data structure.
+
+3. **Initialization Function**:
+    - The `initPage` function initializes a page with the provided page number and sets initial metadata values.
+
+4. **Add Tuple Function**:
+    - The `addTupleToPage` function adds a tuple to a page. It calculates the position to insert the tuple, checks if there's enough space, and either inserts the tuple into the current page or recursively creates a new page and adds the tuple to it.
+
+5. **Main Function**:
+    - The `main` function demonstrates the usage of the provided functions by initializing a page and adding ten tuples of person data to it.
+
+6. **Memory Management**:
+    - The program uses `malloc` to allocate memory for new pages and `free` to release memory after use, ensuring proper memory management.
+
+7. **Example Data**:
+    - Each tuple represents a person with a name, address, and age. These tuples are added to the page in the main function.
+
+Overall, this program provides a basic framework for managing data in a page-based structure, suitable for scenarios where data needs to be stored and managed efficiently.
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*****************************************************************************************************************
+  *                                                   REFERENCIAS                                                  *
+  * https://pt.stackoverflow.com/questions/104118/qual-%C3%A9-a-finalidade-dos-comandos-size-t-e-ssize-t-em-c      *
+  ******************************************************************************************************************/
 
 
 
